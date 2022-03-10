@@ -1,0 +1,39 @@
+server:
+  port: 8181
+
+
+spring:
+  application:
+    name: spring-security-demo
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+  redis:
+    host: 10.161.9.36
+    port: 6379
+    timeout: 5000ms
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        max-wait: 100ms
+        min-idle: 10
+    database: 0
+
+
+
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: V9RlaFCwZfxQ#PLJxRfKGU0IGNZKP7Kq
+  # 令牌有效期（默认30分钟）
+  expireTime: 1800
